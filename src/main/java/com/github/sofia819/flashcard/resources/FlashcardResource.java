@@ -42,7 +42,8 @@ public class FlashcardResource {
   @Path("/add")
   @Timed
   public String addFlashcardsToDeck(ImmutableAddFlashcardRequest request) {
-    if (dao.addCardsToDeck(request.deckName(), request.flashcards())) {
+    if (request.flashcards().size() > 0
+        && dao.addCardsToDeck(request.deckName(), request.flashcards())) {
       return "Cards added";
     }
     return "No cards added";
