@@ -4,7 +4,7 @@ API: https://sofia819-flashcard-api.herokuapp.com/flashcard
 
 ### POST `/create`
 
-- Creates a deck
+- Creates a deck from a given deck name
 - Sample body:
 
 ```json
@@ -15,7 +15,7 @@ API: https://sofia819-flashcard-api.herokuapp.com/flashcard
 
 ### POST `/add`
 
-- Adds flashcards to an existing deck
+- Adds flashcards to an existing deck, given a deck name
 - Sample request:
 
 ```json
@@ -32,8 +32,20 @@ API: https://sofia819-flashcard-api.herokuapp.com/flashcard
 
 ### GET `/{deckName}`
 
-- Gets flashcards from a deck
+- Gets flashcards from a deck, given a deck name
 - Sample request: `/Deck`
+- Sample response:
+
+```json
+{
+  "flashcards": [
+    {
+      "question": "How are you?",
+      "answer": "I am doing well."
+    }
+  ]
+}
+```
 
 ## Running Locally
 

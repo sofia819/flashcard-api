@@ -32,7 +32,7 @@ public class FlashcardResource {
   @Path("/create")
   @Timed
   public String createFlashcardDeck(ImmutableCreateFlashcardDeckRequest request) {
-    if (dao.createDeck(request.deckName())) {
+    if (request.deckName().length() > 0 && dao.createDeck(request.deckName())) {
       return "Deck created";
     }
     return "No deck created";

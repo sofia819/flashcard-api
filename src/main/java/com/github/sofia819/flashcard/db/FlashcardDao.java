@@ -127,7 +127,7 @@ public class FlashcardDao {
     String flashcardDeckTableCreateSql =
         "CREATE TABLE IF NOT EXISTS flashcard_deck ("
             + "deck_id SERIAL PRIMARY KEY NOT NULL,"
-            + "name TEXT NOT NULL );";
+            + "name TEXT NOT NULL UNIQUE);";
 
     Optional<String> flashcardDeckError =
         connection.flatMap(
