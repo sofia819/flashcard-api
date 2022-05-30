@@ -34,3 +34,10 @@ API: https://sofia819-flashcard-api.herokuapp.com/flashcard
 
 - Gets flashcards from a deck
 - Sample request: `/Deck`
+
+## Run Locally
+
+```ignorelang
+mvn package
+java -jar target\flashcard-api-1.0-SNAPSHOT.jar server
+```
