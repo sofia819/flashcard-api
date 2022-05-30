@@ -7,17 +7,6 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>com.heroku.sdk</groupId>
-        <artifactId>heroku-maven-plugin</artifactId>
-        <version>${heroku-maven-plugin.version}</version>
-        <configuration>
-          <appName>sofia819-flashcard-api</appName>
-          <processTypes>
-            <web>java -jar target/flashcard-api-1.0-SNAPSHOT.jar server</web>
-          </processTypes>
-        </configuration>
-      </plugin>
-      <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <version>${maven-jar-plugin.version}</version>
         <configuration>
@@ -80,7 +69,6 @@
     <maven.compiler.source>11</maven.compiler.source>
     <org.postgres.version>42.3.6</org.postgres.version>
     <maven-shade-plugin.version>2.3</maven-shade-plugin.version>
-    <heroku-maven-plugin.version>3.0.3</heroku-maven-plugin.version>
     <jackson-annotations.version>2.12.3</jackson-annotations.version>
   </properties>
 </project>

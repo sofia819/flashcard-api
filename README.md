@@ -35,7 +35,27 @@ API: https://sofia819-flashcard-api.herokuapp.com/flashcard
 - Gets flashcards from a deck
 - Sample request: `/Deck`
 
-## Run Locally
+## Running Locally
+
+1. Install JDK
+2. Install PostgreSQL
+3. Set up local PostgreSQL user and database
+4. Set up an environment variable `JDBC_DATABASE_URL` in the following format:
+
+```ignorelang
+jdbc:postgresql://<host>:<port>/<database>?user=<user>&password=<password>
+```
+
+5. Run in your command line the following:
+
+Windows:
+
+```ignorelang
+mvn package
+java -jar target/flashcard-api-1.0-SNAPSHOT.jar server
+```
+
+Mac:
 
 ```ignorelang
 mvn package
