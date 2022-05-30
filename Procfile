@@ -1,1 +1,1 @@
-web: java -Ddw.server.applicationConnectors[0].port=${PORT} -jar target\flashcard-api-1.0-SNAPSHOT.jar server
+web: java -Ddw.server.applicationConnectors[0].port=${PORT} -jar target/flashcard-api-1.0-SNAPSHOT.jar server
