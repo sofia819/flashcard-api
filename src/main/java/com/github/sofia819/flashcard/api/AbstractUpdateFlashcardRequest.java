@@ -7,9 +7,9 @@ import java.util.Set;
 import org.immutables.value.Value;
 
 @Value.Immutable
-@JsonSerialize(as = ImmutableAddFlashcardRequest.class)
-@JsonDeserialize(as = ImmutableAddFlashcardRequest.class)
-public abstract class AbstractAddFlashcardRequest {
+@JsonSerialize(as = ImmutableUpdateFlashcardRequest.class)
+@JsonDeserialize(as = ImmutableUpdateFlashcardRequest.class)
+public abstract class AbstractUpdateFlashcardRequest {
   public abstract String deckName();
 
   public abstract Set<ImmutableFlashcard> flashcards();
